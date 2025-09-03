@@ -154,12 +154,12 @@ export async function handlePullRequest() {
   });
   info(`generated pull request summary: ${summary.title}`);
 
-  // Update PR title if @presubmitai is mentioned in the title
+  // Update PR title if @mergeshield is mentioned in the title
   if (
     pull_request.title.includes("@presubmitai") ||
     pull_request.title.includes("@presubmit")
   ) {
-    info(`title contains mention of presubmit.ai, so generating a new title`);
+    info(`title contains mention of @merge-shield, so generating a new title`);
     await octokit.rest.pulls.update({
       ...context.repo,
       pull_number: pull_request.number,
