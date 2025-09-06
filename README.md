@@ -78,7 +78,7 @@ This layered design ensures that Merge-Shield remains flexible, maintainable, an
 ### Step 2: Create GitHub WorkFlow
 
     Add this Github Action to your repository by creating .github/workflows/merge-shield.yml:
-    ```bash
+```bash
     name: Merge-Shield
 
     permissions:
@@ -107,7 +107,7 @@ This layered design ensures that Merge-Shield remains flexible, maintainable, an
                    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                    LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
                    LLM_MODEL: "claude-3-5-sonnet-20241022"
-    ```
+```
     The Action Requires: 
         - Github Token: Automatically Provided by GitHub Actions
         - LLM_API_KEY: Your API Key
